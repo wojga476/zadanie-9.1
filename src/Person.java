@@ -39,10 +39,6 @@ public class Person {
 
     public Person(String firstName, String lastName, int age, int pesel) throws NameUndefinedException, IncorrectAgeException {
 
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.age = age;
-        this.pesel = pesel;
         if (getFirstName() == null || getFirstName().length()<3) {
             throw new NameUndefinedException();
         }
@@ -53,6 +49,11 @@ public class Person {
         if (getAge() <1){
             throw new IncorrectAgeException();
         }
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.age = age;
+        this.pesel = pesel;
+
 
     }
     public void printInfo(){
